@@ -5,11 +5,14 @@
   "source": "src/index.html",
   "homepage": "https://github.com/Shakeelkhuhro/Portfolio",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build",
+    "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject",
     "build-gh": "parcel build --public-url 'https://{github-username}.github.io/{repo-name}'",
-    "predeploy": "npm run build-gh",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build-gh"
   },
   "repository": {
     "type": "git",
